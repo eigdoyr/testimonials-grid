@@ -101,7 +101,7 @@ import testimonialData from "../assets/data.json";
 
 .testimonial-card-daniel {
   background-color: var(--black);
-  background-image: url("./src/assets/bg-pattern-quotation.svg");
+  background-image: url("../assets/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 10%;
 }
