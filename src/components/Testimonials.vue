@@ -14,7 +14,7 @@ import testimonialData from "../assets/data.json";
           width="29"
           height="29"
           class="testimonial-avatar"
-          :src="`./src/assets/image-${testimonial.author.firstName}.jpg`"
+          :src="`./image-${testimonial.author.firstName}.jpg`"
           :alt="`${testimonial.author.firstName} avatar icon`"
         />
         <div class="testimonial-author-info">
