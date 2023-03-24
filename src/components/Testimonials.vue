@@ -5,41 +5,40 @@ import testimonialData from "../assets/data.json";
 <template>
   <div class="testimonial">
     <figure
-      :class="`testimonial-card testimonial-card-${testimonial.author.firstName}`"
-      v-for="testimonial in testimonialData"
-      :key="testimonial.id"
+      :class="`testimonial-card testimonial-card-${firstName}`"
+      v-for="{
+        id,
+        isVerified,
+        testimonialMain,
+        testimonialLead,
+        author: { firstName, lastName },
+      } in testimonialData"
+      :key="id"
     >
       <figcaption class="testimonial-author">
         <img
           width="29"
           height="29"
           class="testimonial-avatar"
-          :src="`./image-${testimonial.author.firstName}.jpg`"
-          :alt="`${testimonial.author.firstName} avatar icon`"
+          :src="`./image-${firstName}.jpg`"
+          :alt="`${firstName} avatar icon`"
         />
         <div class="testimonial-author-info">
           <p class="testimonial-author-name">
-            {{
-              testimonial.author.firstName + " " + testimonial.author.lastName
-            }}
+            {{ firstName + " " + lastName }}
           </p>
-          <p
-            v-if="`${testimonial.isVerified}` === 'true'"
-            class="testimonial-verified"
-          >
+          <p v-if="`${isVerified}` === 'true'" class="testimonial-verified">
             Verified Graduate
           </p>
         </div>
       </figcaption>
       <div>
         <p class="testimonial-main">
-          {{ testimonial.testimonialMain }}
+          {{ testimonialMain }}
         </p>
       </div>
       <blockquote class="testimonial-paragraph">
-        <p class="testimonial-lead">
-          &ldquo; {{ testimonial.testimonialLead }} &rdquo;
-        </p>
+        <p class="testimonial-lead">&ldquo; {{ testimonialLead }} &rdquo;</p>
       </blockquote>
     </figure>
   </div>
