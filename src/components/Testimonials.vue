@@ -76,7 +76,6 @@ import testimonialData from "../assets/data.json";
 .testimonial-verified {
   font-size: 0.75rem;
   font-weight: 600;
-  /* opacity: 0.5; */
 }
 
 .testimonial-avatar {
@@ -131,7 +130,6 @@ import testimonialData from "../assets/data.json";
       "daniel daniel jonathan kira"
       "jeanette patrick patrick kira";
     gap: 1.92rem;
-    animation: 2s 1 normal slidein;
   }
 
   .testimonial-lead {
@@ -158,18 +156,6 @@ import testimonialData from "../assets/data.json";
 
   .testimonial-main {
     font-size: 1.2rem;
-  }
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 100%;
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
   }
 }
 </style>
